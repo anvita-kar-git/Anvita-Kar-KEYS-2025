@@ -1,12 +1,12 @@
 # Header 
-site_name: MKDocs Material Template
-site_description: MkDocs Material Templates
-site_author: Tyson Lee Swetnam
-site_url: https://tyson-swetnam.github.io/mkdocs-material-template/
+site_name: Anvita Kar KEYS 2025
+site_description: Anvita Kar's 2025 KEYS Research Internship Website that includes her logbook, her research poster and more.
+site_author: Anvita Kar
+site_url: https://anvita-kar-git.github.io/Anvita-Kar-KEYS-2025/
 
 # Footer
-repo_name: mkdocs-material-template
-repo_url: https://github.com/tyson-swetnam/mkdocs-material-template
+repo_name: Anvita-Kar-KEYS-2025
+repo_url: https://github.com/anvita-kar-git/Anvita-Kar-KEYS-2025
 edit_uri: edit/main/docs/
 # Copyright
 copyright: 'Copyright &copy; 2024 Arizona Board of Regents'
