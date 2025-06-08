@@ -1,8 +1,9 @@
-# Logbook
+**Logbook**
 
-[Daily Logs] -- short (5-6 sentence) summary of your daily activities that includes: (1) what was the plan?, (2) what actually happend?, (3) what could you have done better?, (4) how you will approach this differently next time? 
+Date written in YYYY-MM-DD format
+The Daily Logs are short (5-6 sentence) summaries of my daily activities that include: (1) what was the plan?, (2) what actually happend?, (3) what could I have done better?, (4) how I will approach this differently next time? 
 
-## [Add Date: 2024-05-25]
+_[Training Week: 2025-06-02 to 2025-06-06]_
 
 Today I worked on XXX. 
 
