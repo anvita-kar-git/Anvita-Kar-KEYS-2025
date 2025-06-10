@@ -4,5 +4,5 @@ My PI is Dr. Tyson Lee Swetnam, and along with being affiliated with KEYS and BI
 
 
 My lab requires 2 logos
-Bio5 Logo
-Data Science Institute Logo
+- Bio5 Logo
+- Data Science Institute Logo
