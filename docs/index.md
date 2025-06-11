@@ -25,4 +25,4 @@ This website follows the [FAIR](https://www.go-fair.org/fair-principles/) and [C
 
 ### Daily Logs
 
-[link to another file called logbook.md](logbook.md)
+[Here is a link to my daily logs throughout the summer of KEYS! Be warned...there are a lot of words.](logbook.md)
