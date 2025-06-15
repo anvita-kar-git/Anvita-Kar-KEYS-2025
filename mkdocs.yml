@@ -27,7 +27,7 @@ nav:
     - Assignment 6: assignment6.md
     - Acknowledgments: acknowledgments.md
     - References: references.md
-  - Test on reproducibility?: testonreproducibility.md
+  - Test on reproducibility?: testonreproducibility?.md
   - Resources:
     - GitHub: github.md
     - Prompt Engineering: promptengineering.md
