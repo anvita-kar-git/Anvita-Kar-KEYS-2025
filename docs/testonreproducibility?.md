@@ -6,8 +6,7 @@ This research will significantly advance our understanding of how cutting-edge A
  
 How can Model Context Protocol integrations with state-of-the-art LLMs be optimized to create comprehensive research workflows that enhance database interaction  and collaborative documentation for researchers?
 
-Key and definitions: 
-
+### Key and definitions:
 LLMs1 – “Large Language Models” aka powerful Artificial Intelligence systems that are trained on vast amounts of text data to understand, generate, and manipulate human language
 
 MCP2 – “Model Context Protocol” aka an open standard that helps Artificial Intelligence systems access and interact with external tools like databases and other applications. MCPs help your standard LLM be more helpful and versatile, as they access your applications and automatically change anything that needs to be altered.
@@ -17,7 +16,7 @@ Weaviate4 – Weaviate is an open-source vector database that simply reads all o
 
 Vibe Code5 – Vibe Coding is the process of using the help of different LLMs to generate and edit code. With the extensive use of MCPs, a vibe coder can also save the edited code to their own applications, watching the change happen in real time.
 
-References:
+#### References:
 [1] Torkamaan, H., Steinert, S., Pera, M. S., Kudina, O., Freire, S. K., Verma, H., … Oviedo-Trespalacios, O. (2024). Challenges and future directions for integration of large language models into socio-technical systems. Behaviour & Information Technology, 1–20. [https://doi.org/10.1080/0144929X.2024.2431068](https://doi.org/10.1080/0144929X.2024.2431068)
 
 [2] Zhou, X., Sun, Z. & Li, G. DB-GPT: Large Language Model Meets Database. Data Sci. Eng. 9, 102–111 (2024). [https://doi.org/10.1007/s41019-023-00235-6](https://doi.org/10.1007/s41019-023-00235-6)
