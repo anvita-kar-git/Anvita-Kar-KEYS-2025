@@ -15,6 +15,7 @@ copyright: 'Copyright &copy; 2024 Arizona Board of Regents'
 # Page tree
 nav:
   - Introduction: index.md
+  - Here's what it's about: hereswhatitsabout.md
   - Logbook: logbook.md
   - Assignments: keysassignments.md
   - KEYS 2024 Main Project: 
@@ -27,7 +28,6 @@ nav:
     - Assignment 6: assignment6.md
     - Acknowledgments: acknowledgments.md
     - References: references.md
-  - Here's what it's about: hereswhatitsabout.md
   - Resources:
     - GitHub: github.md
     - Prompt Engineering: promptengineering.md
