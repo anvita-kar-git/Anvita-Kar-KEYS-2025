@@ -86,8 +86,8 @@ theme:
 # Options
 extra:
   social:
-- icon: fontawesome/brands/github
-link: https://github.com/anvita-kar-git
+    - icon: fontawesome/brands/github
+    - link: https://github.com/anvita-kar-git
 #    - icon: fontawesome/brands/twitter
 #      link: https://twitter.com/[your-twitter-username]
 #    - icon: fontawesome/brands/linkedin
