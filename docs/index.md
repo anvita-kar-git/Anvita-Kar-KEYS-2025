@@ -18,7 +18,7 @@ This website follows the [FAIR](https://www.go-fair.org/fair-principles/) and [C
 ### Main Project
 
 My lab’s research investigates how LLMs1 can be enhanced with MCP2 connections to create powerful research tools that hopefully revolutionize academic inquiry and discovery. The work focuses on integrating LLMs1 with PostgreSQL3 databases, and text mining capabilities via Weaviate4 MCP2 connections. In simpler terms, this project is like teaching super-smart computer assistants to connect with different databases and research tools effectively, so they can help scientists find information, discover new patterns, and document their work more effectively than ever before.
-For a more in depth view to my work with Dr. Swetnam's lab, click [here](testonreproducibility?.md)
+For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswhatitsabout.md)
 
 ### Results
 
