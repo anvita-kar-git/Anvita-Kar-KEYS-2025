@@ -35,7 +35,15 @@ graph TD
     end
 
 ```mermaid
-    graph TD
+ graph TD
+    %% --- Style Definitions ---
+    %% Defines a style class named 'purpleTheme' with purple fill and border
+    classDef purpleTheme fill:#9370DB,stroke:#8A2BE2,stroke-width:2px,color:#fff
+    
+    %% Defines a style class named 'pinkTheme' with pink fill and border
+    classDef pinkTheme fill:#DB7093,stroke:#C71585,stroke-width:2px,color:#fff
+
+    %% --- Chart Structure ---
     subgraph "Research Input & Core Problem"
         A["Problem: How to optimize LLM workflows for research?"]
     end
@@ -60,7 +68,7 @@ graph TD
         I[Revolutionized Academic Inquiry & Discovery]
     end
     
-    %% Defining the flow of logic
+    %% --- Flow Logic ---
     A --> B
     C --> E
     D --> F
@@ -69,6 +77,13 @@ graph TD
     E --> I
     F --> I
     G --> I
+
+    %% --- Apply Styles to Nodes ---
+    %% Apply the pink theme to the conceptual nodes
+    class A,E,F,G,H,I pinkTheme
+    
+    %% Apply the purple theme to the core technology nodes
+    class B,C,D purpleTheme
 ```
 
 
