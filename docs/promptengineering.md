@@ -36,18 +36,19 @@ I've been using a specific coding tool named Cline which I access through a plat
 
     subgraph "Prompt Engineering: The Art of Instruction"
         %% CORRECTED: Added a line break before the text to create top padding
-        B{"<br/>Craft a Prompt"}
+        B(["Craft a Prompt"])
         C1["<b>1. Specificity</b><br/><i>e.g., '2-page summary...<br/>highlighting 3 opportunities'</i>"]
         C2["<b>2. Context</b><br/><i>e.g., 'I am a high school student...'</i>"]
         C3["<b>3. Examples</b><br/><i>(Few-shot prompting)</i>"]
         C4["<b>4. Structure</b><br/><i>(Request JSON, tables, etc.)</i>"]
         D{Iterate & Refine}
-        E["LLMs<br/>(Claude, Gemini, ChatGPT)<br/> "]
+        E["LLMs<br/>(Claude, Gemini, ChatGPT)<br/>"]
     end
 
     subgraph "Vibe Coding: The Art of Intuition"
+        
         %% CORRECTED: Added a line break before the text to create top padding
-        F{"<br/>Write Initial Code"}
+        F(["Write Initial Code"])
         G["Focus on 'what works'"]
         H["Prototype quickly"]
         I["Analogy:<br/><i>'Humming a tune until it sounds right'</i>"]
@@ -61,8 +62,8 @@ I've been using a specific coding tool named Cline which I access through a plat
     end
 
     %% --- Flow Logic (This remains simple and correct) ---
-    A --> B & F
-    
+    A ~~~ B & F
+
     B --> C1 & C2 & C3 & C4
     C1 & C2 & C3 & C4 --> D
     D --> E
