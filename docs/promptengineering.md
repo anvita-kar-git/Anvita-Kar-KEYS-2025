@@ -38,6 +38,7 @@ I've been using a specific coding tool named Cline which I access through a plat
     A(User has an Idea / Goal)
 
     subgraph S1 ["Prompt Engineering: The Art of Instruction"]
+        %% Invisible spacer node to push content down
         S1_spacer( )
         B{Craft a Prompt}
         C1["<b>1. Specificity</b><br/><i>e.g., '2-page summary...<br/>highlighting 3 opportunities'</i>"]
@@ -49,6 +50,7 @@ I've been using a specific coding tool named Cline which I access through a plat
     end
 
     subgraph S2 ["Vibe Coding: The Art of Intuition"]
+        %% Invisible spacer node to push content down
         S2_spacer( )
         F{Write Initial Code}
         G["Focus on 'what works'"]
@@ -64,15 +66,18 @@ I've been using a specific coding tool named Cline which I access through a plat
     end
 
     %% --- Flow Logic ---
+    %% The main flow starts here, branching to the two subgraphs
     A --> B & F
-    S1_spacer --> B
-    S2_spacer --> F
     
+    %% Use INVISIBLE links (---) to create space without drawing arrows
+    S1_spacer --- B
+    S2_spacer --- F
+    
+    %% The rest of the logic flows as normal
     B --> C1 & C2 & C3 & C4
     C1 & C2 & C3 & C4 --> D
     D --> E
     
-    %% This was the main broken link - it's now fixed
     F --> G & H & I
     G & H & I --> J
     J --> K
