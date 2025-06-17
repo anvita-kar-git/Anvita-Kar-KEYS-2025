@@ -23,6 +23,70 @@ A more relaxed, intuitive approach to programming where you focus on getting som
 
 I've been using a specific coding tool named Cline which I access through a platform called VScode, and write code with it to complete projects.
 
+graph TD
+    %% --- Style Definitions (Red, Orange, Yellow) ---
+    %% Defines a style for core actions/tools (Red)
+    classDef redTheme fill:#E56B6F,stroke:#D90429,stroke-width:2px,color:#fff
+    
+
+```mermaid
+    %% Defines a style for concepts and principles (Orange)
+    classDef orangeTheme fill:#FFB703,stroke:#FB8500,stroke-width:2px,color:#fff
+
+    %% Styles the subgraph containers (Yellow)
+    style S1,S2,S3,S4 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px
+
+    %% --- Chart Structure ---
+    A(User has an Idea / Goal)
+
+    subgraph S1 ["Prompt Engineering: The Art of Instruction"]
+        B{Craft a Prompt}
+        C1["1. Specificity<br/><i>(e.g., '2-page summary... highlighting 3 opportunities')</i>"]
+        C2["2. Context<br/><i>(e.g., 'I am a high school student...')</i>"]
+        C3["3. Examples<br/><i>(Few-shot prompting)</i>"]
+        C4["4. Structure<br/><i>(Request JSON, tables, etc.)</i>"]
+        D{Iterate & Refine}
+        E[LLMs<br/>(Claude, Gemini, ChatGPT)]
+    end
+
+    subgraph S2 ["Vibe Coding: The Art of Intuition"]
+        F{Write Initial Code}
+        G["Focus on 'what works'"]
+        H["Prototype quickly"]
+        I["Analogy:<br/><i>'Humming a tune until it sounds right'</i>"]
+        J{Iterate until Functional}
+        K[Coding Tools<br/>(VSCode + Cline, Copilot)]
+    end
+
+    subgraph S3 ["The Process"]
+        A --> B
+        B --> C1 & C2 & C3 & C4
+        C1 & C2 & C3 & C4 --> D
+        D --> E
+        
+        A --> F
+        F --> G & H & I
+        G & H & I --> J
+        J --> K
+    end
+
+    subgraph S4 ["The Outcome"]
+        L[High-Quality AI Output<br/>(Text, Reports, Stories)]
+        M[Working Code / Functional Prototype]
+    end
+
+    E --> L
+    K --> M
+
+    %% --- Apply Styles ---
+    %% Apply red to the primary actions and tools
+    class B,F,E,K redTheme
+    
+    %% Apply orange to the starting point, principles, and outcomes
+    class A,C1,C2,C3,C4,G,H,I,D,J,L,M orangeTheme
+```
+
+
 #### References:
 [1] Meskó B, Prompt Engineering as an Important Emerging Skill for Medical Professionals: Tutorial, J Med Internet Res 2023;25:e50638, URL: [https://www.jmir.org/2023/1/e50638](https://www.jmir.org/2023/1/e50638), DOI: 10.2196/50638
 
