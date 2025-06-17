@@ -27,60 +27,68 @@ I've been using a specific coding tool named Cline which I access through a plat
 
 ```mermaid
     graph TD
-    %% --- Style Definitions (Red, Orange, Yellow) ---
+    %% --- Style Definitions ---
+    %% Node Themes
     classDef redTheme fill:#E56B6F,stroke:#D90429,stroke-width:2px,color:#fff
     classDef orangeTheme fill:#FFB703,stroke:#FB8500,stroke-width:2px,color:#fff
-    style S1,S2,S3,S4 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px
+    
+    %% Invisible Spacer Style
+    classDef invisible fill:transparent,stroke:transparent
+
+    %% Subgraph Styles
+    style S1,S2 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px,font-size:18px
+    style S3,S4 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px,font-size:22px,font-weight:bold
 
     %% --- Chart Structure ---
-    A(User has an Idea / Goal)
-
     subgraph S1 ["Prompt Engineering: The Art of Instruction"]
+        %% Invisible spacer to push content down
+        S1_spacer( )
         B{Craft a Prompt}
-        C1["1. Specificity<br/><i>(e.g., '2-page summary... highlighting 3 opportunities')</i>"]
-        C2["2. Context<br/><i>(e.g., 'I am a high school student...')</i>"]
-        C3["3. Examples<br/><i>(Few-shot prompting)</i>"]
-        C4["4. Structure<br/><i>(Request JSON, tables, etc.)</i>"]
+        C1["<b>1. Specificity</b><br/><i>e.g., '2-page summary...<br/>highlighting 3 opportunities'</i>"]
+        C2["<b>2. Context</b><br/><i>e.g., 'I am a high school student...'</i>"]
+        C3["<b>3. Examples</b><br/><i>(Few-shot prompting)</i>"]
+        C4["<b>4. Structure</b><br/><i>(Request JSON, tables, etc.)</i>"]
         D{Iterate & Refine}
-        %% CORRECTED: Added quotes "" around the text because of <br> and ()
         E["LLMs<br/>(Claude, Gemini, ChatGPT)"]
     end
 
     subgraph S2 ["Vibe Coding: The Art of Intuition"]
+        %% Invisible spacer to push content down
+        S2_spacer( )
         F{Write Initial Code}
         G["Focus on 'what works'"]
         H["Prototype quickly"]
         I["Analogy:<br/><i>'Humming a tune until it sounds right'</i>"]
         J{Iterate until Functional}
-        %% CORRECTED: Added quotes "" around the text because of <br> and ()
         K["Coding Tools<br/>(VSCode + Cline, Copilot)"]
     end
 
     subgraph S3 ["The Process"]
-        A --> B
-        B --> C1 & C2 & C3 & C4
-        C1 & C2 & C3 & C4 --> D
-        D --> E
-        
-        A --> F
-        F --> G & H & I
-        G & H & I --> J
-        J --> K
+        %% "User Idea" is now inside this subgraph for centering
+        A(User has an Idea / Goal)
+        A --> B & F
     end
 
     subgraph S4 ["The Outcome"]
-        %% CORRECTED: Added quotes "" around the text because of <br> and ()
         L["High-Quality AI Output<br/>(Text, Reports, Stories)"]
-        %% CORRECTED: Added quotes "" around the text because of the /
         M["Working Code / Functional Prototype"]
     end
 
+    %% --- Flow Logic outside of main process start ---
+    S1_spacer --> B
+    S2_spacer --> F
+    B --> C1 & C2 & C3 & C4
+    C1 & C2 & C3 & C4 --> D
+    D --> E
+    G & H & I --> J
+    J --> K
     E --> L
     K --> M
 
     %% --- Apply Styles ---
     class B,F,E,K redTheme
     class A,C1,C2,C3,C4,G,H,I,D,J,L,M orangeTheme
+    class S1_spacer,S2_spacer invisible
 ```
 
 
