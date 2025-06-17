@@ -29,6 +29,45 @@ Weaviate4 – Weaviate is an open-source vector database that simply reads all o
 
 Vibe Code5 – Vibe Coding is the process of using the help of different LLMs to generate and edit code. With the extensive use of MCPs, a vibe coder can also save the edited code to their own applications, watching the change happen in real time.
 
+```mermaid
+graph TD
+    subgraph "Research Input & Core Problem"
+        A["Problem: How to optimize LLM workflows for research?"]
+    end
+
+    subgraph "Core Engine & Integrations"
+        B[LLM-Powered Research Tool]
+        C[PostgreSQL Database (Structured Data)]
+        D[Weaviate (Text Mining / Vector Search)]
+        
+        B -- "MCP Connection" --> C
+        B -- "MCP Connection" --> D
+    end
+    
+    subgraph "Methodologies & Outputs"
+        E[Enhanced Database Interaction]
+        F[Pattern Recognition in Large Datasets]
+        G[Collaborative Research Documentation]
+        H[Vibe Code Methodologies]
+    end
+
+    subgraph "Ultimate Goal"
+        I[Revolutionized Academic Inquiry & Discovery]
+    end
+    
+    %% Defining the flow of logic
+    A --> B
+    C --> E
+    D --> F
+    H --> G
+    
+    E --> I
+    F --> I
+    G --> I
+```
+
+
+
 ### References
 
 [1] Torkamaan, H., Steinert, S., Pera, M. S., Kudina, O., Freire, S. K., Verma, H., … Oviedo-Trespalacios, O. (2024). Challenges and future directions for integration of large language models into socio-technical systems. Behaviour & Information Technology, 1–20. [https://doi.org/10.1080/0144929X.2024.2431068](https://doi.org/10.1080/0144929X.2024.2431068)
