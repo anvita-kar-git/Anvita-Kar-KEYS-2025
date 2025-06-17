@@ -23,10 +23,6 @@ A more relaxed, intuitive approach to programming where you focus on getting som
 
 I've been using a specific coding tool named Cline which I access through a platform called VScode, and write code with it to complete projects.
 
-graph TD
-    %% --- Style Definitions (Red, Orange, Yellow) ---
-    %% Defines a style for core actions/tools (Red)
-    classDef redTheme fill:#E56B6F,stroke:#D90429,stroke-width:2px,color:#fff
     
 
 ```mermaid
