@@ -26,28 +26,31 @@ I've been using a specific coding tool named Cline which I access through a plat
     
 
 ```mermaid
-   graph TD
+      graph TD
     %% --- Style Definitions ---
     classDef redTheme fill:#E56B6F,stroke:#D90429,stroke-width:2px,color:#fff
     classDef orangeTheme fill:#FFB703,stroke:#FB8500,stroke-width:2px,color:#fff
+    %% ADDED: Style for the invisible spacer nodes
+    classDef spacerTheme fill:transparent,stroke:transparent,stroke-width:0px
 
     %% --- Chart Structure ---
-    A(User has an Idea / Goal)
+    A(When User Has An Idea Or A Goal, They Can Do One Of Two Things:)
 
     subgraph "Prompt Engineering: The Art of Instruction"
-        %% CORRECTED: Added a line break before the text to create top padding
+        %% ADDED: Invisible spacer node for top padding
+        PE_Spacer( )
         B(["Craft a Prompt"])
         C1["<b>1. Specificity</b><br/><i>e.g., '2-page summary...<br/>highlighting 3 opportunities'</i>"]
         C2["<b>2. Context</b><br/><i>e.g., 'I am a high school student...'</i>"]
         C3["<b>3. Examples</b><br/><i>(Few-shot prompting)</i>"]
         C4["<b>4. Structure</b><br/><i>(Request JSON, tables, etc.)</i>"]
         D{Iterate & Refine}
-        E["LLMs<br/>(Claude, Gemini, ChatGPT)<br/>"]
+        E["LLMs<br/>(Claude, Gemini, ChatGPT)<br/> "]
     end
 
     subgraph "Vibe Coding: The Art of Intuition"
-        
-        %% CORRECTED: Added a line break before the text to create top padding
+        %% ADDED: Invisible spacer node for top padding
+        VC_Spacer( )
         F(["Write Initial Code"])
         G["Focus on 'what works'"]
         H["Prototype quickly"]
@@ -61,9 +64,15 @@ I've been using a specific coding tool named Cline which I access through a plat
         M["Working Code / Functional Prototype<br/> "]
     end
 
-    %% --- Flow Logic (This remains simple and correct) ---
-    A ~~~ B & F
-
+    %% --- Flow Logic ---
+    %% CHANGED: Point initial flow to the new spacers
+    A ~~~ PE_Spacer & VC_Spacer
+    
+    %% ADDED: Connect spacers to first nodes with invisible links
+    PE_Spacer ~~~ B
+    VC_Spacer ~~~ F
+    
+    %% The rest of the flow remains the same
     B --> C1 & C2 & C3 & C4
     C1 & C2 & C3 & C4 --> D
     D --> E
@@ -78,6 +87,8 @@ I've been using a specific coding tool named Cline which I access through a plat
     %% --- Apply Node Styles ---
     class B,F,E,K redTheme
     class A,C1,C2,C3,C4,G,H,I,D,J,L,M orangeTheme
+    %% ADDED: Apply the spacer style to the new nodes
+    class PE_Spacer,VC_Spacer spacerTheme
 ```
 
 
