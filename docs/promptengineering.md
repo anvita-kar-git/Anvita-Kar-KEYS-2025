@@ -30,6 +30,7 @@ graph TD
     
 
 ```mermaid
+    graph TD
     %% Defines a style for concepts and principles (Orange)
     classDef orangeTheme fill:#FFB703,stroke:#FB8500,stroke-width:2px,color:#fff
 
