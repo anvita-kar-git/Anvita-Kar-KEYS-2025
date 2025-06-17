@@ -35,20 +35,25 @@ graph TD
     end
 
 ```mermaid
- graph TD
+graph TD
     %% --- Style Definitions ---
-    %% Defines a style class named 'purpleTheme' with purple fill and border
+    %% Node Styles
     classDef purpleTheme fill:#9370DB,stroke:#8A2BE2,stroke-width:2px,color:#fff
-    
-    %% Defines a style class named 'pinkTheme' with pink fill and border
     classDef pinkTheme fill:#DB7093,stroke:#C71585,stroke-width:2px,color:#fff
 
+    %% Subgraph Container Style (Lavender)
+    style S1 fill:#E6E6FA,stroke:#B57EDC,stroke-width:2px
+    style S2 fill:#E6E6FA,stroke:#B57EDC,stroke-width:2px
+    style S3 fill:#E6E6FA,stroke:#B57EDC,stroke-width:2px
+    style S4 fill:#E6E6FA,stroke:#B57EDC,stroke-width:2px
+
     %% --- Chart Structure ---
-    subgraph "Research Input & Core Problem"
+    %% Subgraphs now have an ID (S1, S2, etc.) and a Title in quotes
+    subgraph S1 ["Research Input & Core Problem"]
         A["Problem: How to optimize LLM workflows for research?"]
     end
 
-    subgraph "Core Engine & Integrations"
+    subgraph S2 ["Core Engine & Integrations"]
         B[LLM-Powered Research Tool]
         C["PostgreSQL Database (Structured Data)"]
         D["Weaviate (Text Mining / Vector Search)"]
@@ -57,14 +62,14 @@ graph TD
         B -- "MCP Connection" --> D
     end
     
-    subgraph "Methodologies & Outputs"
+    subgraph S3 ["Methodologies & Outputs"]
         E[Enhanced Database Interaction]
         F[Pattern Recognition in Large Datasets]
         G[Collaborative Research Documentation]
         H[Vibe Code Methodologies]
     end
 
-    subgraph "Ultimate Goal"
+    subgraph S4 ["Ultimate Goal"]
         I[Revolutionized Academic Inquiry & Discovery]
     end
     
@@ -78,11 +83,8 @@ graph TD
     F --> I
     G --> I
 
-    %% --- Apply Styles to Nodes ---
-    %% Apply the pink theme to the conceptual nodes
+    %% --- Apply Node Styles ---
     class A,E,F,G,H,I pinkTheme
-    
-    %% Apply the purple theme to the core technology nodes
     class B,C,D purpleTheme
 ```
 
