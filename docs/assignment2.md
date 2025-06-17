@@ -35,9 +35,13 @@ graph TD
     end
 
 ```mermaid
+    graph TD
+    subgraph "Research Input & Core Problem"
+        A["Problem: How to optimize LLM workflows for research?"]
+    end
+
     subgraph "Core Engine & Integrations"
         B[LLM-Powered Research Tool]
-        %% Corrected lines below: text is now in double quotes
         C["PostgreSQL Database (Structured Data)"]
         D["Weaviate (Text Mining / Vector Search)"]
         
