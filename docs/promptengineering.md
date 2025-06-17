@@ -31,10 +31,9 @@ graph TD
 
 ```mermaid
     graph TD
-    %% Defines a style for concepts and principles (Orange)
+    %% --- Style Definitions (Red, Orange, Yellow) ---
+    classDef redTheme fill:#E56B6F,stroke:#D90429,stroke-width:2px,color:#fff
     classDef orangeTheme fill:#FFB703,stroke:#FB8500,stroke-width:2px,color:#fff
-
-    %% Styles the subgraph containers (Yellow)
     style S1,S2,S3,S4 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px
 
     %% --- Chart Structure ---
@@ -47,7 +46,8 @@ graph TD
         C3["3. Examples<br/><i>(Few-shot prompting)</i>"]
         C4["4. Structure<br/><i>(Request JSON, tables, etc.)</i>"]
         D{Iterate & Refine}
-        E[LLMs<br/>(Claude, Gemini, ChatGPT)]
+        %% CORRECTED: Added quotes "" around the text because of <br> and ()
+        E["LLMs<br/>(Claude, Gemini, ChatGPT)"]
     end
 
     subgraph S2 ["Vibe Coding: The Art of Intuition"]
@@ -56,7 +56,8 @@ graph TD
         H["Prototype quickly"]
         I["Analogy:<br/><i>'Humming a tune until it sounds right'</i>"]
         J{Iterate until Functional}
-        K[Coding Tools<br/>(VSCode + Cline, Copilot)]
+        %% CORRECTED: Added quotes "" around the text because of <br> and ()
+        K["Coding Tools<br/>(VSCode + Cline, Copilot)"]
     end
 
     subgraph S3 ["The Process"]
@@ -72,18 +73,17 @@ graph TD
     end
 
     subgraph S4 ["The Outcome"]
-        L[High-Quality AI Output<br/>(Text, Reports, Stories)]
-        M[Working Code / Functional Prototype]
+        %% CORRECTED: Added quotes "" around the text because of <br> and ()
+        L["High-Quality AI Output<br/>(Text, Reports, Stories)"]
+        %% CORRECTED: Added quotes "" around the text because of the /
+        M["Working Code / Functional Prototype"]
     end
 
     E --> L
     K --> M
 
     %% --- Apply Styles ---
-    %% Apply red to the primary actions and tools
     class B,F,E,K redTheme
-    
-    %% Apply orange to the starting point, principles, and outcomes
     class A,C1,C2,C3,C4,G,H,I,D,J,L,M orangeTheme
 ```
 
