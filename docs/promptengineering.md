@@ -30,50 +30,39 @@ I've been using a specific coding tool named Cline which I access through a plat
     %% --- Style Definitions ---
     classDef redTheme fill:#E56B6F,stroke:#D90429,stroke-width:2px,color:#fff
     classDef orangeTheme fill:#FFB703,stroke:#FB8500,stroke-width:2px,color:#fff
-    classDef invisible fill:transparent,stroke:transparent
-    style S1,S2 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px,font-size:18px
-    style S4 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px,font-size:22px,font-weight:bold
 
     %% --- Chart Structure ---
     A(User has an Idea / Goal)
 
-    subgraph S1 ["Prompt Engineering: The Art of Instruction"]
-        %% Invisible spacer node to push content down
-        S1_spacer( )
-        B{Craft a Prompt}
+    subgraph "Prompt Engineering: The Art of Instruction"
+        %% CORRECTED: Added a line break before the text to create top padding
+        B{"<br/>Craft a Prompt"}
         C1["<b>1. Specificity</b><br/><i>e.g., '2-page summary...<br/>highlighting 3 opportunities'</i>"]
         C2["<b>2. Context</b><br/><i>e.g., 'I am a high school student...'</i>"]
         C3["<b>3. Examples</b><br/><i>(Few-shot prompting)</i>"]
         C4["<b>4. Structure</b><br/><i>(Request JSON, tables, etc.)</i>"]
         D{Iterate & Refine}
-        E["LLMs<br/>(Claude, Gemini, ChatGPT)"]
+        E["LLMs<br/>(Claude, Gemini, ChatGPT)<br/> "]
     end
 
-    subgraph S2 ["Vibe Coding: The Art of Intuition"]
-        %% Invisible spacer node to push content down
-        S2_spacer( )
-        F{Write Initial Code}
+    subgraph "Vibe Coding: The Art of Intuition"
+        %% CORRECTED: Added a line break before the text to create top padding
+        F{"<br/>Write Initial Code"}
         G["Focus on 'what works'"]
         H["Prototype quickly"]
         I["Analogy:<br/><i>'Humming a tune until it sounds right'</i>"]
         J{Iterate until Functional}
-        K["Coding Tools<br/>(VSCode + Cline, Copilot)"]
+        K["Coding Tools<br/>(VSCode + Cline, Copilot)<br/> "]
     end
 
-    subgraph S4 ["The Outcome"]
-        L["High-Quality AI Output<br/>(Text, Reports, Stories)"]
-        M["Working Code / Functional Prototype"]
+    subgraph "The Outcome"
+        L["High-Quality AI Output<br/>(Text, Reports, Stories)<br/> "]
+        M["Working Code / Functional Prototype<br/> "]
     end
 
-    %% --- Flow Logic ---
-    %% The main flow starts here, branching to the two subgraphs
+    %% --- Flow Logic (This remains simple and correct) ---
     A --> B & F
     
-    %% Use INVISIBLE links (---) to create space without drawing arrows
-    S1_spacer --- B
-    S2_spacer --- F
-    
-    %% The rest of the logic flows as normal
     B --> C1 & C2 & C3 & C4
     C1 & C2 & C3 & C4 --> D
     D --> E
@@ -85,10 +74,9 @@ I've been using a specific coding tool named Cline which I access through a plat
     E --> L
     K --> M
 
-    %% --- Apply Styles ---
+    %% --- Apply Node Styles ---
     class B,F,E,K redTheme
     class A,C1,C2,C3,C4,G,H,I,D,J,L,M orangeTheme
-    class S1_spacer,S2_spacer invisible
 ```
 
 
