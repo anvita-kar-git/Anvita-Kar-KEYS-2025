@@ -26,22 +26,18 @@ I've been using a specific coding tool named Cline which I access through a plat
     
 
 ```mermaid
-    graph TD
+   graph TD
     %% --- Style Definitions ---
-    %% Node Themes
     classDef redTheme fill:#E56B6F,stroke:#D90429,stroke-width:2px,color:#fff
     classDef orangeTheme fill:#FFB703,stroke:#FB8500,stroke-width:2px,color:#fff
-    
-    %% Invisible Spacer Style
     classDef invisible fill:transparent,stroke:transparent
-
-    %% Subgraph Styles
     style S1,S2 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px,font-size:18px
-    style S3,S4 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px,font-size:22px,font-weight:bold
+    style S4 fill:#FFF3B0,stroke:#E09F3E,stroke-width:2px,font-size:22px,font-weight:bold
 
     %% --- Chart Structure ---
+    A(User has an Idea / Goal)
+
     subgraph S1 ["Prompt Engineering: The Art of Instruction"]
-        %% Invisible spacer to push content down
         S1_spacer( )
         B{Craft a Prompt}
         C1["<b>1. Specificity</b><br/><i>e.g., '2-page summary...<br/>highlighting 3 opportunities'</i>"]
@@ -53,7 +49,6 @@ I've been using a specific coding tool named Cline which I access through a plat
     end
 
     subgraph S2 ["Vibe Coding: The Art of Intuition"]
-        %% Invisible spacer to push content down
         S2_spacer( )
         F{Write Initial Code}
         G["Focus on 'what works'"]
@@ -63,25 +58,25 @@ I've been using a specific coding tool named Cline which I access through a plat
         K["Coding Tools<br/>(VSCode + Cline, Copilot)"]
     end
 
-    subgraph S3 ["The Process"]
-        %% "User Idea" is now inside this subgraph for centering
-        A(User has an Idea / Goal)
-        A --> B & F
-    end
-
     subgraph S4 ["The Outcome"]
         L["High-Quality AI Output<br/>(Text, Reports, Stories)"]
         M["Working Code / Functional Prototype"]
     end
 
-    %% --- Flow Logic outside of main process start ---
+    %% --- Flow Logic ---
+    A --> B & F
     S1_spacer --> B
     S2_spacer --> F
+    
     B --> C1 & C2 & C3 & C4
     C1 & C2 & C3 & C4 --> D
     D --> E
+    
+    %% This was the main broken link - it's now fixed
+    F --> G & H & I
     G & H & I --> J
     J --> K
+    
     E --> L
     K --> M
 
