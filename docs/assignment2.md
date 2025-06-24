@@ -2,8 +2,9 @@
 
 ### Purpose: 
 
-My lab’s research investigates how LLMs1 can be enhanced with MCP2 connections to create powerful research tools that hopefully revolutionize academic inquiry and discovery. The work focuses on integrating LLMs1 with PostgreSQL3 databases, and text mining capabilities via Weaviate4 MCP2 connections. In simpler terms, this project is like teaching super-smart computer assistants to connect with different databases and research tools effectively, so they can help scientists find information, discover new patterns, and document their work more effectively than ever before.
+My lab’s research investigates how LLMs[^1] can be enhanced with MCP2 connections to create powerful research tools that hopefully revolutionize academic inquiry and discovery. The work focuses on integrating LLMs1 with PostgreSQL3 databases, and text mining capabilities via Weaviate4 MCP2 connections. In simpler terms, this project is like teaching super-smart computer assistants to connect with different databases and research tools effectively, so they can help scientists find information, discover new patterns, and document their work more effectively than ever before.
 
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ### Prior Research
 
