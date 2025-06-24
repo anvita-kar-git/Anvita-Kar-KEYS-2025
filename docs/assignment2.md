@@ -2,9 +2,8 @@
 
 ### Purpose: 
 
-My lab’s research investigates how LLMs[^1] can be enhanced with MCP2 connections to create powerful research tools that hopefully revolutionize academic inquiry and discovery. The work focuses on integrating LLMs1 with PostgreSQL3 databases, and text mining capabilities via Weaviate4 MCP2 connections. In simpler terms, this project is like teaching super-smart computer assistants to connect with different databases and research tools effectively, so they can help scientists find information, discover new patterns, and document their work more effectively than ever before.
+My lab’s research investigates how LLMs[^1] can be enhanced with MCP[^2] connections to create powerful research tools that hopefully revolutionize academic inquiry and discovery. The work focuses on integrating LLMs[^1] with PostgreSQL[^3] databases, and text mining capabilities via Weaviate[^4] MCP[^2] connections. In simpler terms, this project is like teaching super-smart computer assistants to connect with different databases and research tools effectively, so they can help scientists find information, discover new patterns, and document their work more effectively than ever before.
 
-[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ### Prior Research
 
@@ -21,9 +20,10 @@ How can Model Context Protocol integrations with state-of-the-art LLMs be optimi
 Hypothesis 0: [null hypotheses here]\
 
 ### Key and definitions:
-LLMs1 – “Large Language Models” aka powerful Artificial Intelligence systems that are trained on vast amounts of text data to understand, generate, and manipulate human language
+[^1]: “Large Language Models” aka powerful Artificial Intelligence systems that are trained on vast amounts of text data to understand, generate, and manipulate human language
 
-MCP2 – “Model Context Protocol” aka an open standard that helps Artificial Intelligence systems access and interact with external tools like databases and other applications. MCPs help your standard LLM be more helpful and versatile, as they access your applications and automatically change anything that needs to be altered.
+[^2]:
+ “Model Context Protocol” aka an open standard that helps Artificial Intelligence systems access and interact with external tools like databases and other applications. MCPs help your standard LLM be more helpful and versatile, as they access your applications and automatically change anything that needs to be altered.
 
 PostgreSQL3 – An open-source object-relational database management system (ORDBMS) known for its reliability, data integrity, and extensive feature set [1].
 
