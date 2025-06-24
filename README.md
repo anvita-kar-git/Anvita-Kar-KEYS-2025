@@ -10,7 +10,7 @@ Instructions for Cloning this template repository:
 3. Run the following command:
 
     ```bash
-    git clone https://github.com/tyson-swetnam/mkdocs-material-template
+    git clone https://github.com/anvita-kar-git/Anvita-Kar-KEYS-2025
     ```
 
 ## Imports the template repository
