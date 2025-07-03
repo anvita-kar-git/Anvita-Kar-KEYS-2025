@@ -31,7 +31,7 @@ nav:
   - Resources:
     - GitHub: github.md
     - Prompt Engineering: promptengineering.md
-    - Basic React app creation: How to create your own react app .md
+    - Basic React app creation: basicReactApp.md
 
 # Configuration
 theme:
