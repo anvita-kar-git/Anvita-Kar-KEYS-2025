@@ -11,16 +11,25 @@ cd /config
 npx create-react-app (your-app-name)
 cd (your-app-name)
 ```
+
 ### Step 3: Clone its files
-In order to work with your newly created react app, you need to be able to edit the code in real time. Go to the explorer on the left side of your screen, the icon should look like this.
+In order to work with your newly created react app, you need to be able to edit the code in real time. Go to the 'Explorer' on the left side of your screen, the icon should look like this.
 
 <img width="50" alt="image" src="https://github.com/user-attachments/assets/9fea97f5-f499-4877-a78e-d141515fa8ec" />
 
 Then click on open folder and from the dropdown menu, choose the folder that has your react app's name on it. The `/config` directory should automatically show up in the search bar, your react app's files live inside it.
 
+### Step 4: Edit the 'package.json'
+After you clone your react app's files, scroll to find the `src` folder and open the `package.json` file.
 
-### Step 4: Build for Production with Correct Path
-For your app to be hosted on the correct proxy network, we need to make a few changes to the protocol path. Add this code to your bash terminal.
+<img width="684" alt="image" src="https://github.com/user-attachments/assets/a4e0b9bb-800c-4c18-8a76-985a55a8d1f5" />
+
+
+In that json file, under "scripts" edit the "start" line to `"start": "PUBLIC_URL=/proxy/3001 react-scripts start",`.
+
+
+### Step 5: Build for Production with Correct Path
+Now, for your app to be hosted on the correct proxy network, we need to make a few changes to the protocol path. Add this code to your bash terminal.
 ```bash
 PUBLIC_URL=/proxy/3001 npm run build
 npx serve -s build -l 3001 -n
@@ -31,7 +40,8 @@ Your app should be up and functioning, visit a url that looks like https://#your
 
 If your not sure what your cyverse url is, you can just click on "Ports" next to your terminal. Then click on the globe icon that appears when you hover your cursor over the number 3001 to open your app in another browser tab.
 
-<img width="230" alt="image" src="https://github.com/user-attachments/assets/f155d024-4b64-4f3f-a5f0-c99c4c203ba6" />
+<img width="230" alt="image" src="https://github.com/user-attachments/assets/f155d024-4b64-4f3f-a5f0-c99c4c203ba6" /> ![image](https://github.com/user-attachments/assets/8ee76660-a4f6-42c5-99f6-4e86ea902450)
+
 
 
 ## This is what your screen should look like at the end.
