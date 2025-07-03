@@ -1,7 +1,7 @@
 # _How to Set Up a React App on the CyVerse VS Code Server_
 
 ### Step 1: Configure your VScode server with all the basic installations.
-If you haven't already, visit this page about the [base installations in VS Code](exampleurl) and follow the instructions to prep your workspace. This is to ensure that your app has the correct extensions and MCP servers to install correctly.
+If you haven't already, visit this page about the [base installations in VS Code](Baseinstallations.md) and follow the instructions to prep your workspace. This is to ensure that your app has the correct extensions and MCP servers to install correctly.
 
 ### Step 2: Create a React App
 In your bash terminal, type or copy/paste this code. This will create a basic react app by accessing [React's](https://react.dev/) official [create-react-app github repository](https://github.com/facebook/create-react-app), which contains the rules and instructions for your computer. 
