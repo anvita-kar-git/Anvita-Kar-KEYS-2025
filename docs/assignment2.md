@@ -7,29 +7,28 @@ My lab’s research investigates how LLMs[^1] can be enhanced with MCP[^2] conne
 
 ### Prior Research
 
- Limited research exists on the integration of MCPs2 with LLMs1 for academic research applications, though foundational work has been established in database-LLM1 integration and text mining. Amer-Yahia explored the intersection of large language models and database research, raising important questions about how LLMs1 and database systems can enhance each other in research contexts [3]. Additionally, recent work on DB-GPT has demonstrated the potential for LLMs2 to revolutionize data management systems by serving as intelligent interfaces between users and databases [4]. Research examining LLM1 integration into scientific workflows has highlighted both opportunities and challenges in incorporating these technologies into academic research practices [2]. However, research combining MCP2 protocols, database integration, and collaborative research documentation remain largely unexplored, representing a significant gap that our research aims to address.
+Limited research exists on the integration of MCPs[^2] with LLMs[^1] for academic research applications, though foundational work has been established in database-LLM[^1] integration and text mining. Amer-Yahia explored the intersection of large language models and database research, raising important questions about how LLMs[^1] and database systems can enhance each other in research contexts [3]. Additionally, recent work on DB-GPT has demonstrated the potential for LLMs[^2] to revolutionize data management systems by serving as intelligent interfaces between users and databases [^4]. Research examining LLM[^1] integration into scientific workflows has highlighted both opportunities and challenges in incorporating these technologies into academic research practices [2]. However, research combining MCP[^2] protocols, database integration, and collaborative research documentation remain largely unexplored, representing a significant gap that our research aims to address.
 
 ### Need For Study 
 
-This research will significantly advance our understanding of how cutting-edge AI systems can be practically implemented to enhance research productivity. By developing and testing MCP2-enhanced LLM1 workflows, this study expects to demonstrate measurable improvements in research efficiency, pattern recognition in large datasets, and the ability to collaborate during research. The integration of Vibe Code5 methodologies with traditional research approaches could transform how researchers interact with Artificial Intelligence and generate insights.
+This research will significantly advance our understanding of how cutting-edge AI systems can be practically implemented to enhance research productivity. By developing and testing MCP[^2]-enhanced LLM1 workflows, this study expects to demonstrate measurable improvements in research efficiency, pattern recognition in large datasets, and the ability to collaborate during research. The integration of Vibe Code[^5] methodologies with traditional research approaches could transform how researchers interact with Artificial Intelligence and generate insights.
 
 #### Problem Statement: 
 
 How can Model Context Protocol integrations with state-of-the-art LLMs be optimized to create comprehensive research workflows that enhance database interaction  and collaborative documentation for researchers?
 
-Hypothesis 0: [null hypotheses here]\
+
 
 ### Key and definitions:
-[^1]: “Large Language Models” aka powerful Artificial Intelligence systems that are trained on vast amounts of text data to understand, generate, and manipulate human language
+[^1]: “Large Language Models” - powerful Artificial Intelligence systems that are trained on vast amounts of text data to understand, generate, and manipulate human language
 
-[^2]:
- “Model Context Protocol” aka an open standard that helps Artificial Intelligence systems access and interact with external tools like databases and other applications. MCPs help your standard LLM be more helpful and versatile, as they access your applications and automatically change anything that needs to be altered.
+[^2]:“Model Context Protocol” - An open standard that helps Artificial Intelligence systems access and interact with external tools like databases and other applications. MCPs help your standard LLM be more helpful and versatile, as they access your applications and automatically change anything that needs to be altered.
 
-PostgreSQL3 – An open-source object-relational database management system (ORDBMS) known for its reliability, data integrity, and extensive feature set [1].
+[^3]:"PostgreSQL" – An open-source object-relational database management system (ORDBMS) known for its reliability, data integrity, and extensive feature set [1].
 
-Weaviate4 – Weaviate is an open-source vector database that simply reads all of the files you import and is able to comprehensively interpret the data inside them, answering questions about the data with no difficulty.
+[^4]:"Weaviate" – Weaviate is an open-source vector database that simply reads all of the files you import and is able to comprehensively interpret the data inside them, answering questions about the data with no difficulty.
 
-Vibe Code5 – Vibe Coding is the process of using the help of different LLMs to generate and edit code. With the extensive use of MCPs, a vibe coder can also save the edited code to their own applications, watching the change happen in real time.
+[^5]:"Vibe Code" – Vibe Coding is the process of using the help of different LLMs to generate and edit code. With the extensive use of MCPs, a vibe coder can also save the edited code to their own applications, watching the change happen in real time.
 
 
 
