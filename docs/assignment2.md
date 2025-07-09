@@ -20,15 +20,15 @@ How can Model Context Protocol integrations with state-of-the-art LLMs be optimi
 
 
 ### Key and definitions:
-[^1]: “Large Language Models” - powerful Artificial Intelligence systems that are trained on vast amounts of text data to understand, generate, and manipulate human language
+[^1]: “Large Language Models” - Powerful Artificial Intelligence systems that are trained on vast amounts of text data to understand, generate, and manipulate human language
 
 [^2]:“Model Context Protocol” - An open standard that helps Artificial Intelligence systems access and interact with external tools like databases and other applications. MCPs help your standard LLM be more helpful and versatile, as they access your applications and automatically change anything that needs to be altered.
 
 [^3]:"PostgreSQL" – An open-source object-relational database management system (ORDBMS) known for its reliability, data integrity, and extensive feature set [1].
 
-[^4]:"Weaviate" – Weaviate is an open-source vector database that simply reads all of the files you import and is able to comprehensively interpret the data inside them, answering questions about the data with no difficulty.
+[^4]:"Weaviate" – Open-source vector database that simply reads all of the files you import and is able to comprehensively interpret the data inside them, answering questions about the data with no difficulty.
 
-[^5]:"Vibe Code" – Vibe Coding is the process of using the help of different LLMs to generate and edit code. With the extensive use of MCPs, a vibe coder can also save the edited code to their own applications, watching the change happen in real time.
+[^5]:"Vibe Code" – The process of using the help of different LLMs to generate and edit code. With the extensive use of MCPs, a vibe coder can also save the edited code to their own applications, watching the change happen in real time.
 
 
 
