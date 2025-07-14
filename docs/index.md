@@ -1,8 +1,6 @@
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) [![license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0) 
 
 # Introduction
-
-
 <this is an invisible comment -- add your orcid id after https://orcid.org/ below>
 
 Author: [Anvita Kar]() [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/)
@@ -24,6 +22,12 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 
 [Results]
 
+
 ### Daily Logs
 
 [Here is a link to my daily logs throughout the summer of KEYS! Be warned...there are a lot of words.](logbook.md)
+
+<!-- Chatbot Iframe -->
+<div style="position: fixed; bottom: 80px; right: 20px; z-index: 1000;">
+    <iframe src="chatbot.html" width="370" height="520" style="border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 10px;"></iframe>
+</div>
