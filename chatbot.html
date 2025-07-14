@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Chatbot</title>
+    <style>
+        /* Chatbot Widget Styles */
+        .chatbot-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-widget.open {
+            transform: translateY(0);
+        }
+
+        .chatbot-header {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .chatbot-header p {
+            margin: 5px 0 0 0;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 1.4;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .message.user {
+            background: #667eea;
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .message.bot {
+            background: #f1f3f4;
+            color: #333;
+            align-self: flex-start;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #eee;
+            gap: 10px;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #eee;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .chatbot-input input:focus {
+            border-color: #667eea;
+        }
+
+        .chatbot-input button {
+            padding: 12px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .chatbot-input button:hover {
+            background: #5a6fd8;
+        }
+
+        .chatbot-input button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-toggle svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 12px 16px;
+            background: #f1f3f4;
+            border-radius: 18px;
+            align-self: flex-start;
+            max-width: 80%;
+        }
+
+        .typing-indicator.active {
+            display: block;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #999;
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .chatbot-widget {
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                right: 0;
+                border-radius: 0;
+            }
+            
+            .chatbot-toggle {
+                bottom: 30px;
+                right: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" id="chatbot-toggle">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9H18V11H6V9M14,14H6V12H14V14M18,8H6V6H18V8Z" />
+        </svg>
+    </button>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <div class="chatbot-header">
+            <h3>Ask Me About My Work</h3>
+            <p>I can help answer questions about my projects and expertise</p>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot">
+                Hi! I'm here to help you learn about my work and projects. What would you like to know?
+            </div>
+        </div>
+        
+        <div class="typing-indicator" id="typing-indicator">
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Ask me anything about my work..." />
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+
+    <script>
+        class WebsiteChatbot {
+            constructor() {
+                this.isOpen = false;
+                this.messages = [];
+                this.isTyping = false;
+                
+                // Configuration - UPDATE THESE WITH YOUR DETAILS
+                this.config = {
+                    apiKey: '', // Add your OpenAI API key here
+                    weaviateUrl: 'http://localhost:8080', // Your Weaviate endpoint
+                    websiteUrl: window.location.origin, // Current website URL
+                    systemPrompt: `You are a helpful assistant that answers questions about this website and the owner's work. 
+                    You have access to the website content and can provide detailed information about projects, skills, and expertise.
+                    Be friendly, professional, and informative. If you don't know something, say so honestly.`
+                };
+                
+                this.initializeElements();
+                this.setupEventListeners();
+                this.loadWebsiteContent();
+            }
+            
+            initializeElements() {
+                this.toggle = document.getElementById('chatbot-toggle');
+                this.widget = document.getElementById('chatbot-widget');
+                this.messagesContainer = document.getElementById('chatbot-messages');
+                this.input = document.getElementById('chatbot-input');
+                this.sendButton = document.getElementById('chatbot-send');
+                this.typingIndicator = document.getElementById('typing-indicator');
+            }
+            
+            setupEventListeners() {
+                this.toggle.addEventListener('click', () => this.toggleWidget());
+                this.sendButton.addEventListener('click', () => this.sendMessage());
+                this.input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.sendMessage();
+                });
+            }
+            
+            toggleWidget() {
+                this.isOpen = !this.isOpen;
+                this.widget.classList.toggle('open', this.isOpen);
+                
+                if (this.isOpen) {
+                    this.input.focus();
+                    this.toggle.style.display = 'none';
+                } else {
+                    this.toggle.style.display = 'flex';
+                }
+            }
+            
+            async loadWebsiteContent() {
+                // This function would scrape or load your website content
+                // For now, we'll use a placeholder
+                this.websiteContent = `
+                    This is sample content about the website owner's work.
+                    Add your actual website content here or implement web scraping.
+                `;
+            }
+            
+            async sendMessage() {
+                const message = this.input.value.trim();
+                if (!message || this.isTyping) return;
+                
+                this.addMessage(message, 'user');
+                this.input.value = '';
+                this.sendButton.disabled = true;
+                
+                await this.getBotResponse(message);
+                this.sendButton.disabled = false;
+            }
+            
+            addMessage(content, type) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${type}`;
+                messageDiv.textContent = content;
+                
+                this.messagesContainer.appendChild(messageDiv);
+                this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+                
+                this.messages.push({ content, type, timestamp: new Date() });
+            }
+            
+            showTyping() {
+                this.isTyping = true;
+                this.typingIndicator.classList.add('active');
+                this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+            }
+            
+            hideTyping() {
+                this.isTyping = false;
+                this.typingIndicator.classList.remove('active');
+            }
+            
+            async getBotResponse(userMessage) {
+                this.showTyping();
+                
+                try {
+                    // If you have Weaviate set up, uncomment and modify this:
+                    // const context = await this.searchWeaviate(userMessage);
+                    
+                    // For now, we'll use a simple response system
+                    const response = await this.generateResponse(userMessage);
+                    
+                    this.hideTyping();
+                    this.addMessage(response, 'bot');
+                    
+                } catch (error) {
+                    this.hideTyping();
+                    this.addMessage('Sorry, I encountered an error. Please try again.', 'bot error-message');
+                    console.error('Chatbot error:', error);
+                }
+            }
+            
+            async searchWeaviate(query) {
+                // Implement Weaviate search here
+                // This is a placeholder for when you set up Weaviate
+                try {
+                    const response = await fetch(`${this.config.weaviateUrl}/v1/graphql`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${this.config.weaviateApiKey}`
+                        },
+                        body: JSON.stringify({
+                            query: `{
+                                Get {
+                                    Pages(nearText: {concepts: ["${query}"]}, limit: 3) {
+                                        content
+                                        url
+                                        title
+                                    }
+                                }
+                            }`
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    return data.data?.Get?.Pages || [];
+                } catch (error) {
+                    console.error('Weaviate search error:', error);
+                    return [];
+                }
+            }
+            
+            async generateResponse(userMessage) {
+                // Simple response system - replace with OpenAI API call
+                const responses = {
+                    'hello': 'Hello! How can I help you learn about my work?',
+                    'projects': 'I work on various projects including web development, data science, and machine learning.',
+                    'skills': 'My skills include programming, data analysis, and project management.',
+                    'contact': 'You can contact me through the contact form on this website.',
+                    'experience': 'I have experience in software development, research, and technical writing.'
+                };
+                
+                const lowerMessage = userMessage.toLowerCase();
+                
+                for (const [key, response] of Object.entries(responses)) {
+                    if (lowerMessage.includes(key)) {
+                        return response;
+                    }
+                }
+                
+                // If no match found, return a generic response
+                return `I'd be happy to help you learn about my work! You asked about "${userMessage}". Could you be more specific about what you'd like to know?`;
+            }
+            
+            // Optional: OpenAI API integration
+            async callOpenAI(userMessage, context = '') {
+                if (!this.config.apiKey) {
+                    throw new Error('OpenAI API key not configured');
+                }
+                
+                const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${this.config.apiKey}`
+                    },
+                    body: JSON.stringify({
+                        model: 'gpt-3.5-turbo',
+                        messages: [
+                            { role: 'system', content: this.config.systemPrompt + (context ? `\n\nContext: ${context}` : '') },
+                            { role: 'user', content: userMessage }
+                        ],
+                        max_tokens: 150
+                    })
+                });
+                
+                const data = await response.json();
+                return data.choices[0].message.content;
+            }
+        }
+        
+        // Initialize the chatbot when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new WebsiteChatbot();
+        });
+    </script>
+</body>
+</html>
