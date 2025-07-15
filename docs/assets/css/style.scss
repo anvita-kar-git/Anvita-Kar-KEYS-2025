@@ -1,0 +1,23 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Chatbot Widget Styling */
+.chatbot-widget {
+    position: relative;
+    margin: 40px 20px 40px 60px;
+    height: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #e6f3ff;
+    border: 2px solid #b3d9ff;
+}
+
+.chatbot-widget iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
