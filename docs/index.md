@@ -29,10 +29,10 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 
 
  <!-- Chatbot Widget Embed -->
-<div style="position: fixed; bottom: 20px; z-index: 1000; height: 70vh; max-height: 400px; width: 700px;">
+<div style="position: fixed; bottom: 20px; z-index: 1000; height: 40vh; max-height: 100px; width: 700px;">
     <iframe
         src="https://anvitakar-cyverse-gpt.vercel.app"
-        style="width: 100%; height: 100%; border: none; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);"
+        style="width: 300%; height: 40%; border: none; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);"
         title="Anvita Kar's AI Assistant">
     </iframe>
 </div>
