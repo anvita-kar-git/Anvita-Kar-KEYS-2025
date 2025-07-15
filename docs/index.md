@@ -29,24 +29,9 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 
 
 <!-- Chatbot Widget Section -->
-<div style="
-    position: relative;     /* Static positioning so it flows with content */
-    margin: 40px 20px 40px 60px; /* Top, Right, Bottom, Left margins */
-    height: 400px;          /* Fixed height in pixels - adjust as needed */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* Enhanced shadow for better floating effect */
-    border-radius: 12px;    /* Rounded corners for modern look */
-    overflow: hidden;       /* Ensures iframe respects border radius */
-    background: #e6f3ff;    /* Light blue background */
-    border: 2px solid #b3d9ff; /* Slightly darker blue border for definition */
-">
+<div class="chatbot-widget">
     <iframe
         src="https://anvitakar-cyverse-gpt.vercel.app"
-        style="
-            width: 100%; 
-            height: 100%; 
-            border: none;
-            border-radius: 12px;
-        "
         title="Anvita Kar's AI Assistant">
     </iframe>
 </div>
