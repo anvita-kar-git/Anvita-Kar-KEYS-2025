@@ -34,7 +34,7 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
     bottom: 20px;           /* 20px margin from bottom */
     left: 20px;             /* 20px margin from left */
     right: 20px;            /* 20px margin from right (creates automatic width) */
-    height: 400px;          /* Fixed height in pixels - adjust as needed */
+    height: 40px;          /* Fixed height in pixels - adjust as needed */
     z-index: 1000;          /* Ensures it stays on top of other content */
     box-shadow: 0 -4px 20px rgba(0,0,0,0.15); /* Enhanced shadow for better floating effect */
     border-radius: 12px;    /* Rounded corners for modern look */
