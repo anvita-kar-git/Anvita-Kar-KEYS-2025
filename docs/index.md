@@ -28,20 +28,27 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 [Here is a link to my daily logs throughout the summer of KEYS! Be warned...there are a lot of words.](logbook.md)
 
 
-<!-- Full-Width Bottom Chatbot Widget -->
+<!-- Floating Chatbot Widget -->
 <div style="
-    position: fixed;     /* This makes it stick to the screen and move with scroll */
-    bottom: 0;           /* Aligns it to the very bottom */
-    left: 0;             /* Aligns it to the very left */
-    width: 100%;         /* Makes it span the full width of the page */
-    height: 10vh;        /* Sets height to 60% of the viewport's height. Adjust this value! */
-    max-height: 20px;   /* Optional: sets a maximum pixel height */
-    z-index: 1000;       /* Ensures it stays on top of other content */
-    box-shadow: 0 -4px 12px rgba(0,0,0,0.1); /* Shadow on the top edge */
+    position: absolute;      /* Changed from fixed to absolute so it scrolls with content */
+    bottom: 20px;           /* 20px margin from bottom */
+    left: 20px;             /* 20px margin from left */
+    right: 20px;            /* 20px margin from right (creates automatic width) */
+    height: 400px;          /* Fixed height in pixels - adjust as needed */
+    z-index: 1000;          /* Ensures it stays on top of other content */
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15); /* Enhanced shadow for better floating effect */
+    border-radius: 12px;    /* Rounded corners for modern look */
+    overflow: hidden;       /* Ensures iframe respects border radius */
+    background: white;      /* Background color in case iframe doesn't load */
 ">
     <iframe
         src="https://anvitakar-cyverse-gpt.vercel.app"
-        style="width: 100%; height: 100%; border: none;"
+        style="
+            width: 100%; 
+            height: 100%; 
+            border: none;
+            border-radius: 12px;
+        "
         title="Anvita Kar's AI Assistant">
     </iframe>
 </div>
