@@ -25,12 +25,12 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 
 ### Daily Logs
 
-[Here is a link to my daily logs throughout the summer of KEYS! Be warned...there are a lot of words.](logbook.md)
+[Here is a link to my daily logs throughout the summer of KEYS!](logbook.md)
 
 
 <!-- Chatbot Widget Section -->
 <div class="chatbot-widget">
-    <div style="border-radius: 25px; overflow: hidden; width: 100%; height: 100%;">
+    <div>
         <iframe
             src="https://anvitakar-cyverse-gpt.vercel.app"
             title="Anvita Kar's AI Assistant">
