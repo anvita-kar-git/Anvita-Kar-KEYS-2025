@@ -9,16 +9,33 @@
     margin: 40px 0px 40px 60px;
     width: calc(100% - 80px);
     height: 400px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    border-radius: 20px;
-    overflow: hidden;
     background: #e6f3ff;
-    border: 2px solid #b3d9ff;
+    border: 3px solid #b3d9ff;
+    border-radius: 25px !important;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    overflow: hidden !important;
+    padding: 0;
 }
 
 .chatbot-widget iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 18px;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    border-radius: 22px !important;
+    background: transparent;
+    display: block;
+}
+
+/* Force rounded corners with a mask if needed */
+.chatbot-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 3px #b3d9ff;
 }
