@@ -33,9 +33,9 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
     position: fixed;     /* This makes it stick to the screen and move with scroll */
     bottom: 0;           /* Aligns it to the very bottom */
     left: 0;             /* Aligns it to the very left */
-    width: 100%;         /* Makes it span the full width of the page */
-    height: 60vh;        /* Sets height to 60% of the viewport's height. Adjust this value! */
-    max-height: 500px;   /* Optional: sets a maximum pixel height */
+    width: 90%;         /* Makes it span the full width of the page */
+    height: 10vh;        /* Sets height to 60% of the viewport's height. Adjust this value! */
+    max-height: 100px;   /* Optional: sets a maximum pixel height */
     z-index: 1000;       /* Ensures it stays on top of other content */
     box-shadow: 0 -4px 12px rgba(0,0,0,0.1); /* Shadow on the top edge */
 ">
