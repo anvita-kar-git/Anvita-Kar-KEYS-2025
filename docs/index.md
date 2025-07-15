@@ -28,7 +28,7 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 [Here is a link to my daily logs throughout the summer of KEYS! Be warned...there are a lot of words.](logbook.md)
 
 
-    <!-- Chatbot Widget Embed -->
+ <!-- Chatbot Widget Embed -->
 <div style="position: fixed; bottom: 20px; z-index: 1000; height: 70vh; max-height: 400px; width: 700px;">
     <iframe
         src="https://anvitakar-cyverse-gpt.vercel.app"
