@@ -28,12 +28,12 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 [Here is a link to my daily logs throughout the summer of KEYS!](logbook.md)
 
 
-<!-- Chatbot Widget Section -->
-<div class="chatbot-widget">
-    <div>
-        <iframe
-            src="https://anvitakar-cyverse-gpt.vercel.app"
-            title="Anvita Kar's AI Assistant">
-        </iframe>
-    </div>
+<!-- Chatbot Widget - All styles inline -->
+<div style="position: relative; margin: 40px 0px 40px 60px; width: calc(100% - 80px); height: 400px; background: #e6f3ff; border: 3px solid #b3d9ff; border-radius: 25px; box-shadow: 0 6px 25px rgba(0,0,0,0.2); overflow: hidden; padding: 15px;">
+    <iframe
+        src="https://anvitakar-cyverse-gpt.vercel.app"
+        style="width: 100%; height: 100%; border: none; border-radius: 20px; background: white;"
+        frameborder="0"
+        title="Anvita Kar's AI Assistant">
+    </iframe>
 </div>
