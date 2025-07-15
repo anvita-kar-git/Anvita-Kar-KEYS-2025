@@ -30,8 +30,10 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 
 <!-- Chatbot Widget Section -->
 <div class="chatbot-widget">
-    <iframe
-        src="https://anvitakar-cyverse-gpt.vercel.app"
-        title="Anvita Kar's AI Assistant">
-    </iframe>
+    <div style="border-radius: 25px; overflow: hidden; width: 100%; height: 100%;">
+        <iframe
+            src="https://anvitakar-cyverse-gpt.vercel.app"
+            title="Anvita Kar's AI Assistant">
+        </iframe>
+    </div>
 </div>
