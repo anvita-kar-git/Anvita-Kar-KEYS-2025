@@ -27,11 +27,13 @@ For a more in depth view to my work with Dr. Swetnam's lab, click [here](hereswh
 
 [Here is a link to my daily logs throughout the summer of KEYS! Be warned...there are a lot of words.](logbook.md)
 
-<!-- Chatbot Widget Embed -->
-<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; height: 600px; width: 400px;">
+
+    <!-- Chatbot Widget Embed -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; height: 70vh; max-height: 700px; width: 450px;">
     <iframe
         src="https://anvitakar-cyverse-gpt.vercel.app"
         style="width: 100%; height: 100%; border: none; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);"
         title="Anvita Kar's AI Assistant">
     </iframe>
 </div>
+
