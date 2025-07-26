@@ -69,4 +69,4 @@ The URL structure is always https://your-instance.cyverse.run/proxy/PORT/
 
 
 
-### _That's it! This workflow will work every time with CyVerse, good job!_
+### _That's it! This workflow will work every time with a CyVerse VICE VScode server, good job!_
