@@ -100,7 +100,7 @@ For this method, you still have to follow the first two steps, but instead of ad
         "-y",
         "@modelcontextprotocol/server-filesystem",
         "/home/vscode",
-        "/config
+        "/config"
       ]
     }
   }
