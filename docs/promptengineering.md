@@ -34,7 +34,7 @@ I've been using a specific coding tool named Cline which I access through a plat
     classDef spacerTheme fill:transparent,stroke:transparent,stroke-width:0px
 
     %% --- Chart Structure ---
-    A(When User Has An Idea Or A Goal, They Can Do One Of Two Things:)
+    A(When User Has An Idea Or A Goal:)
 
     subgraph "Prompt Engineering: The Art of Instruction"
         %% ADDED: Invisible spacer node for top padding
