@@ -29,6 +29,7 @@ nav:
     - Acknowledgments: acknowledgments.md
     - References: references.md
   - Resources:
+    - Basic VSCode Installations: Baseinstallations.md
     - GitHub: github.md
     - Prompt Engineering: promptengineering.md
     - Basic React app creation: basicReactApp.md
