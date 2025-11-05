@@ -92,7 +92,7 @@ Both Filesystem and Fetch should show
 ### Step 3: Different Initial Configuration
 For this method, you still have to follow the first two steps, but instead of adding the previously mentioned code to your `cline_mcp_settings.json` you will now add this one. This is a basic version of the code directly from the [official MCP server github repository](https://github.com/modelcontextprotocol/servers), and will later be edited by Cline.
 
-```{
+```
 {
   "mcpServers": {
     "filesystem": {
